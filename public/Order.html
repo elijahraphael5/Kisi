@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisi Express | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <nav>
+               
+                <h2 class="logo">
+                  <a href="index.html"><img src="Images/logo.png" alt="logo"></a>  
+                    
+                </h2>
+                <ul class="links">
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="order.html">Order Now</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa fa-bars" style="color: #ffffff;"></i>
+                </div>
+            </nav>
+        <div class="dropdown_menu">
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+        </div>
+    </header>
+    <div class="bmain">
+        <h1>Get a ride with <br>
+            a single tap</h1>
+    </div>
+    <div class="blue"></div>
+    <div class="ordebook">
+        <div class="orderp" data-aos="fade-up">
+            <div class="ordersect">
+                <h2>Order Now</h2> <br>
+                <h4>
+                    Relish a stress-free transfer to your destination!
+                    Experience seamless movement without any worries 
+                    or hassle. Your journey, your way – smooth rides,
+                    zero stress! <br> <br>
+                    <button><a href="orderform.html">Instant Ride</a></button>
+                </h4>
+            </div>
+                <div class="orderphoto">
+                    <img src="Images/order1.png" alt="">
+                </div>
+        </div>
+        <div class="bookp">
+            <div class="bookphoto" data-aos="fade-up">
+                <img src="Images/order2.png" alt="">
+            </div>
+            <div class="booksect" data-aos="fade-up">
+                <h2>Parcel</h2> <br>
+                <h4>
+                    Relish a stress-free transfer to your destination!
+                    Experience seamless movement without any worries 
+                    or hassle. Your journey, your way – smooth rides,
+                    zero stress! <br> <br>
+                    <button><a href="orderform.html">Send Parcel</a></button> 
+                </h4>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+    <div class="seperator"></div>
+    <div class="app" data-aos="fade-up">
+        <div class="rbox">
+            <h1>Download <br>
+                our mobile App <br>
+                <button>Download Now</button>
+            </h1> 
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="footer" data-aos="fade-up">
+        <div class="start">
+            <div class="fbox">
+                <set1>
+                    <a href="index.html"> <img src="Images/logo (2).png" alt=""></a>
+                </set1>
+                <set2>
+                    <ul>
+                   <li><a href="index.html">Kisi</a></li> <br>
+                    <li><a href="Booking.html">Booking</a></li> <br>
+                    <li><a href="faqs.html">FAQs</a></li> <br>
+                    <li><a href="Order.html">Order Now</a></li> <br>
+                    <li> <a href="Booking.html">Parcel</a></li>
+                </ul>
+                </set2>
+                <set2>
+                    <ul>
+                    <li><a href="About.html">Company</a></li> <br>
+                    <li><a href="About.html">About Us</a></li> <br>
+                    <li><a href="contact.html">Contact Us</a></li> <br>
+                </ul>
+                </set2>
+             
+                <set3>
+                    <div class="appimage">
+                        <img src="/Images/icon/social/social.png" alt="">
+                    </div>
+                    <div class="rudic">
+                        <img src="Images/icon/social/Vector.png" alt="">
+                        <img src="Images/icon/social/Vector (2).png" alt="">
+                        <img src="Images/icon/social/Group 11.png" alt="">
+                        <img src="Images/icon/social/Group 10.png" alt="">
+                        <img src="Images/icon/social/Vector (1).png" alt="">
+                    </div>
+                </set3>
+            </div>
+        </div><br><br>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Duration of the animation
+  });
+</script>
+<script>
+    const toggle_btn = document.querySelector('.toggle_btn')
+    const toggle_btnicons = document.querySelector('.toggle_btn i')
+    const dropdown_menu = document.querySelector('.dropdown_menu')
+
+    toggle_btn.onclick = function () {
+        dropdown_menu.classList.toggle('open')
+        const isOpen = dropdown_menu.classList.contains('open')
+
+        toggle_btnicons.classList = isOpen
+        ? 'fa fa-close'
+        : 'fa fa-bars'
+
+        if (!isOpen) {
+        toggle_btnicons.classList.add('fa fa-bars')
+        }
+    }
+</script>  
+</body>
+</html>
