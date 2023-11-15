@@ -385,7 +385,7 @@ li{
   
 }
 .rbox{
-  background-image: url('/Images/app.png');
+  background-image: url('Images/app.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1119,7 +1119,7 @@ margin: auto;
       transition: transform 0.8s ease-in-out;
     }
     .rbox{
-      background-image: url('/Images/portapp.png');
+      background-image: url('Images/portapp.png');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;

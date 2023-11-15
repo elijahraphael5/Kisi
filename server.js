@@ -33,7 +33,7 @@ let commonStyles = `
     font-size: 25px;
   }
   strong {
-    color: #007bff;
+    color: #ffffff;
   }
 `;
 
