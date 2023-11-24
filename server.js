@@ -12,6 +12,8 @@ app.use(express.static('public'));
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
+  port: 465, // Use the appropriate port for secure SMTP (e.g., 465 for SMTPS)
+  secure: true, // For secure SSL/TLS connection
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -33,7 +35,7 @@ let commonStyles = `
     font-size: 25px;
   }
   strong {
-    color: #ffffff;
+    color: #808080;
   }
 `;
 
@@ -42,22 +44,22 @@ const formDetails = {
   reServe: {
     recipientEmail: 'elijahraphael5@gmail.com',
     subject: 'New Reservation',
-    fields: ['sname', 'semail', 'sphone', 'saddress', 'sdestination', 'spickupAddress', 'sdate', 'spickupTime'],
+    fields: ['sname', 'semail', 'sphone', 'spickupAddress', 'sdestination', 'sdate', 'spickupTime'],
   },
   sendParcel: {
-    recipientEmail: 'realsticks14@gmail.com',
+    recipientEmail: 'elijahraphael5@gmail.com',
     subject: 'New Parcel',
-    fields: ['name', 'email', 'phone', 'address', 'destination', 'pickupAddress'],
+    fields: ['name', 'email', 'phone', 'address', 'destination'],
   },
   instantRide: {
-    recipientEmail: 'realsticks14@gmail.com',
+    recipientEmail: 'elijahraphael5@gmail.com',
     subject: 'New Instant Ride',
-    fields: ['name', 'email', 'phone', 'address', 'destination', 'pickupAddress', 'drop1', 'drop2'],
+    fields: ['name', 'email', 'phone', 'address', 'destination', 'drop1'],
   },
   bookRide: {
-    recipientEmail: 'realsticks14@gmail.com',
+    recipientEmail: 'elijahraphael5@gmail.com',
     subject: 'New Ride Booking',
-    fields: ['name', 'email', 'phone', 'address', 'destination', 'pickupAddress', 'date', 'pickupTime'],
+    fields: ['name', 'email', 'phone', 'pickupAddress', 'destination', 'date', 'pickupTime'],
   },
 };
 

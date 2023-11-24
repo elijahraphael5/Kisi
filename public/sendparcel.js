@@ -9,7 +9,7 @@ sendParcelForm.addEventListener('submit', async (event) => {
   const phone = document.getElementById('phone').value;
   const address = document.getElementById('address').value;
   const destination = document.getElementById('destination').value;
-  const pickupAddress = document.getElementById('pickupAddress').value;
+ 
 
   const formData = {
     name: name,
@@ -17,7 +17,6 @@ sendParcelForm.addEventListener('submit', async (event) => {
     phone: phone,
     address: address,
     destination: destination,
-    pickupAddress: pickupAddress
   };
 
   try {

@@ -19,130 +19,60 @@
             <h2 class="title">Book Ride</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="name" id="name" placeholder="Enter your Name" />
+              <input type="text" name="name" id="name" placeholder="Enter your Name" required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" name="email" id="email" placeholder="Enter your Email" />
+              <input type="email" name="email" id="email" placeholder="Enter your Email" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-phone"></i>
-              <input type="text" name="phone" id="phone" placeholder="Phone Number" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-address-book"></i>
-              <input type="text" name="address" id="address" placeholder="Address" />
+              <input type="text" name="phone" id="phone" placeholder="Phone Number" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-location-arrow"></i>
-              <input type="text" name="destination" id="destination" placeholder="Destination" />
+              <input type="text" name="pickupAddress" id="pickupAddress" placeholder="Pick Up Address" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-location-arrow"></i>
-              <input type="text" name="pickupAddress" id="pickupAddress" placeholder="Pick Up Address" />
+              <input type="text" name="destination" id="destination" placeholder="Destination" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-calendar"></i>
-              <input type="date" name="date" id="date" placeholder="Date" />
+              <input type="date" name="date" id="date" placeholder="Date" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-clock"></i>
-              <input type="time" name="pickupTime" id="pickupTime" placeholder="Pick up Time" />
+              <input type="time" name="pickupTime" id="pickupTime" placeholder="Pick up Time" required/>
             </div>
-            <input type="submit" value="Order Now" class="btn solid" id="orderNowBtnBooking" />
+            <input type="submit" value="Submit" class="btn solid" id="orderNowBtnBooking" />
             
 
           </form>
 
         
-          <form action="#" class="sign-up-form" id="reServe" method="POST">
-            <h2 class="title">Get Reservations!</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" name="name" id="sname" placeholder="Enter your Name" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" name="email" id="semail" placeholder="Enter your Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-phone"></i>
-              <input type="text" name="phone" id="sphone" placeholder="Phone Number" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-address-book"></i>
-              <input type="text" name="address" id="saddress" placeholder="Address" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-location-arrow"></i>
-              <input type="text" name="destination" id="sdestination" placeholder="Destination" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-location-arrow"></i>
-              <input type="text" name="pickupAddress" id="spickupAddress" placeholder="Pick Up Address" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-calendar"></i>
-              <input type="date" name="date" id="sdate" placeholder="Date" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-clock"></i>
-              <input type="time" name="pickupTime" id="spickupTime" placeholder="Pick up Time" />
-            </div>
-            <input type="submit" value="Get Scheduled!" class="btn solid" />
-          </form>
+          
           
         </div>
       </div>
       <div class="panels-container">
 
         <div class="panel left-panel">
-            <div class="content">
-              <h3>Schedule An Item</h3>
-              <p>Schedule an Item! Plan your deliveries with ease. Choose a date and time, and we'll ensure your 
-                item reaches its destination on schedule. 
-                Convenience at your fingertips. Book now!</p>
-              <button class="btn transparent" id="sign-up-btn">Send Now</button>
-          </div>
-          <img src="./img/Mail-rafiki.svg" class="image" alt="">
-        </div>
-
-        <div class="panel right-panel">
-            <div class="content">
-              <h3>Book Ride</h3>
-              <p>Book a Ride! Effortless travel at your fingertips. Safe, reliable, 
-                and comfortable rides tailored to your destination. 
-                Experience convenience like never before. Your journey starts here!</p>
-              <button class="btn transparent" id="sign-in-btn">Order Ride</button>
+          <div class="content">
+            <h3>Book Ride</h3>
+            <p>Book a Ride! Effortless travel at your fingertips. Safe, reliable, 
+              and comfortable rides tailored to your destination. 
+              Experience convenience like never before. Your journey starts here!</p>
+            <br><br>
           </div>
           <img src="./img/Trip-cuate.svg" class="image" alt="">
         </div>
+
+       
       </div>
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Your form submission logic goes here
-        document.getElementById('reServe').addEventListener('submit', async (event) => {
-          event.preventDefault();
-
-          // Simulating a form submission for demonstration
-          const fakeFormData = { success: true, message: 'Form submitted successfully' };
-          const response = { ok: true, json: async () => fakeFormData };
-
-          if (response.ok) {
-            const data = await response.json();
-            console.log('Server response:', data);
-            alert('Form submitted successfully'); // Use browser alert
-            // Handle success response from the server
-          } else {
-            console.error('Server returned an error:', response.status);
-            alert('Failed to submit form'); // Use browser alert
-            // Handle error response from the server
-          }
-        });
-      });
-    </script>
+  
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -169,9 +99,8 @@
 </script>
 
 
-    <script src="slider.js"></script>
-    <script src="book.js"></script>
-    <script src="reserve.js"></script>
    
+    <script src="book.js"></script>
+    
   </body>
 </html>

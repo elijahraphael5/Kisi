@@ -9,9 +9,8 @@ form.addEventListener('submit', async (event) => {
   const phone = document.getElementById('phone').value;
   const address = document.getElementById('address').value;
   const destination = document.getElementById('destination').value;
-  const pickupAddress = document.getElementById('pickupAddress').value;
   const drop1 = document.getElementById('drop1').value;
-  const drop2 = document.getElementById('drop2').value;
+  
 
   const formData = {
     name: name,
@@ -19,9 +18,7 @@ form.addEventListener('submit', async (event) => {
     phone: phone,
     address: address,
     destination: destination,
-    pickupAddress: pickupAddress,
     drop1: drop1,
-    drop2: drop2
   };
 
   try {

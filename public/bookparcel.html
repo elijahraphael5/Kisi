@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Order</title>
+    <link rel="stylesheet" type="text/css" href="bookingstyles.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+            <form action="#" class="sign-in-form" id="reServe" method="POST">
+                <h2 class="title">Get Reservations!</h2>
+                <div class="input-field">
+                  <i class="fas fa-user"></i>
+                  <input type="text" name="name" id="sname" placeholder="Enter your Name" required />
+                </div>
+                <div class="input-field">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" name="email" id="semail" placeholder="Enter your Email" required/>
+                </div>
+                <div class="input-field">
+                  <i class="fas fa-phone"></i>
+                  <input type="text" name="phone" id="sphone" placeholder="Phone Number" required/>
+                </div>
+                <div class="input-field">
+                  <i class="fas fa-location-arrow"></i>
+                  <input type="text" name="pickupAddress" id="spickupAddress" placeholder="Pick Up Address" required />
+                </div>
+                <div class="input-field">
+                  <i class="fas fa-location-arrow"></i>
+                  <input type="text" name="destination" id="sdestination" placeholder="Destination" required/>
+                </div>
+               
+                <div class="input-field">
+                  <i class="fas fa-calendar"></i>
+                  <input type="date" name="date" id="sdate" placeholder="Date" required/>
+                </div>
+                <div class="input-field">
+                  <i class="fas fa-clock"></i>
+                  <input type="time" name="pickupTime" id="spickupTime" placeholder="Pick up Time" required/>
+                </div>
+                <input type="submit" value="Submit" class="btn solid" />
+              </form>
+              
+            </div>
+
+        
+          
+      </div>
+      <div class="panels-container">
+
+        <div class="panel left-panel">
+            <div class="content">
+              <h3>Schedule An Item</h3>
+              <p>Schedule an Item! Plan your deliveries with ease. Choose a date and time, and we'll ensure your 
+                item reaches its destination on schedule. 
+                Convenience at your fingertips. Book now!</p>
+              <br><br>
+          </div>
+          <img src="./img/Mail-rafiki.svg" class="image" alt="">
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Your form submission logic goes here
+        document.getElementById('reServe').addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          // Simulating a form submission for demonstration
+          const fakeFormData = { success: true, message: 'Form submitted successfully' };
+          const response = { ok: true, json: async () => fakeFormData };
+
+          if (response.ok) {
+            const data = await response.json();
+            console.log('Server response:', data);
+            alert('Form submitted successfully'); // Use browser alert
+            // Handle success response from the server
+          } else {
+            console.error('Server returned an error:', response.status);
+            alert('Failed to submit form'); // Use browser alert
+            // Handle error response from the server
+          }
+        });
+      });
+    </script>
+
+    <script src="reserve.js"></script>
+   
+  </body>
+</html>

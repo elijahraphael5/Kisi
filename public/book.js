@@ -8,9 +8,8 @@ bookRideForm.addEventListener('submit', async (event) => {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
-  const address = document.getElementById('address').value;
-  const destination = document.getElementById('destination').value;
   const pickupAddress = document.getElementById('pickupAddress').value;
+  const destination = document.getElementById('destination').value;
   const date = document.getElementById('date').value;
   const pickupTime = document.getElementById('pickupTime').value;
 
@@ -18,9 +17,8 @@ bookRideForm.addEventListener('submit', async (event) => {
     name: name,
     email: email,
     phone: phone,
-    address: address,
-    destination: destination,
     pickupAddress: pickupAddress,
+    destination: destination,
     date: date,
     pickupTime: pickupTime,
   };

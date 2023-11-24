@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sname = document.getElementById('sname').value;
     const semail = document.getElementById('semail').value;
     const sphone = document.getElementById('sphone').value;
-    const saddress = document.getElementById('saddress').value;
-    const sdestination = document.getElementById('sdestination').value;
     const spickupAddress = document.getElementById('spickupAddress').value;
+    const sdestination = document.getElementById('sdestination').value;
     const sdate = document.getElementById('sdate').value;
     const spickupTime = document.getElementById('spickupTime').value;
 
@@ -19,9 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
       sname: sname,
       semail: semail,
       sphone: sphone,
-      saddress: saddress,
-      sdestination: sdestination,
       spickupAddress: spickupAddress,
+      sdestination: sdestination,
       sdate: sdate,
       spickupTime: spickupTime,
     };

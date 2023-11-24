@@ -74,6 +74,52 @@ li{
     max-height: 30px;
     width: auto;
   }
+  .order-now {
+    position: relative;
+    z-index: 8;
+    color: white;
+    font-size: clamp(8px, 13px, 13px);
+    font-weight: bold;
+}
+
+/* Style the sub-menu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:rgba(74, 74, 74, 0.622);
+    padding: 0;
+    border: none;
+}
+
+/* Show sub-menu when hovering over "Order Now" */
+.order-now:hover .sub-menu {
+    display: block;
+}
+
+/* Style the sub-menu items */
+.sub-menu li {
+    border-bottom: none;
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+
+/* Style anchor links in the sub-menu */
+.sub-menu a {
+    display: block;
+    padding: 2px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Change anchor link color on hover */
+.sub-menu a:hover {
+    background-color:#2d2d2d;
+}
   .toggle_btn{
     font-size: 1.5rem;
     cursor: pointer;
@@ -130,6 +176,7 @@ li{
     display: grid;
     grid-template-columns: 1fr; /* Single column layout by default */
     grid-template-rows: 1fr auto; /* First row takes available space, second row fits content */
+    overflow: hidden;
 }
 
 
@@ -204,37 +251,37 @@ li{
     position: relative;
     z-index: 1;
     height:clamp(20px, 60px,  70px); /* Adjust the height of the box */
-    width: clamp(250px, 320px, 460px); /* Adjust the width of the box */
+    width: clamp(255px, 350px, 460px); /* Adjust the width of the box */
     border-radius: 40px; /* Creates rounded edges */
-    background-color: white; /* Set background color */
+    background-color:#2F313F; /* Set background color */
     display: flex;
     justify-content: flex-end; /* Align content to the right */
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     left: 50%;
     transform: translateX(-50%); /* Only translate horizontally */
     top: -280px;
+    
 }
 .action-box a{
   color: white;
-}
-
-.action-box h5 {
-    font-size: clamp(8px, 10px, 14px);
-    display: flex;
+  font-size: 10px;
 }
 
 .my-button {
     background-color: #0080CA;
     color: #fff;
-    padding: 20px 46px;
+    padding: 20px 45px;
     border: none;
     border-radius:  38px;
     cursor: pointer;
     font-family: sans-serif;
     font-size: 17px;
     font-weight: bold;
-    margin-right: -9.7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
 }
 
 .my-button:hover {
@@ -255,6 +302,7 @@ li{
   align-items: center;
   padding: 10px 0; /* Add padding to the services container */
   transition: transform 0.8s ease-in-out;
+  overflow: hidden;
 }
 
 .services h1 {
@@ -272,14 +320,14 @@ li{
   width: 80%;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 4fr));
   grid-auto-rows: 250px;
-  gap: 12px
+  
 }
 
 .serv1 {
   width: 100%; /* Take full width on smaller screens */
-  max-width: 300px; /* Set a maximum width */
+  max-width: 400px; /* Set a maximum width */
   background-color: #E2F4FF;
   border-radius: 10px;
   padding: 20px; /* Responsive padding */
@@ -310,7 +358,7 @@ li{
   white-space: nowrap; /* Prevent line breaks within the container */
 }
 .order h4 {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 900;
   white-space: nowrap; /* Prevent line breaks within the h4 element */
 }
@@ -425,6 +473,7 @@ li{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 40px;
  
 }
 
@@ -1085,6 +1134,9 @@ margin: auto;
 
 
   @media only screen and (max-width: 600px) {
+    .nav{
+      overflow: hidden;
+    }
     .logo img{
       height: auto;
       width: 58px;
@@ -1095,7 +1147,7 @@ margin: auto;
     }
     .toggle_btn {
       display: block;
-      margin-left: 180px;
+      margin-right: -60px;
     }
   
     .dropdown_menu{
